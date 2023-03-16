@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="GreenColor">#008200</color>
+    <color name="GreenColorFade">#64008200</color>
+    <color name="BlueColor">#0000ff</color>
+    <color name="BlueColorFade">#640000ff</color>
+    <color name="RedColor">#ff0000</color>
+    <color name="RedColorFade">#64ff0000</color>
+    <color name="BlackColor">#000000</color>
+    <color name="BlackColorFade">#64000000</color>
+    <color name="YellowColor">#ffff00</color>
+    <color name="YellowColorFade">#64ffff00</color>
+
+    <color name="WhiteColor">#ffffff</color>
+    <color name="Buttons">#64ffffff</color>
+    <color name="Reset">#96960096</color>
+    <color name="Gold">#e1e100</color>
+    <color name="DiffRed">#640000</color>
+</resources>

@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/mainTable"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/oppTable"
+        app:srcCompat="@color/GreenColor" />
+
+    <ImageView
+        android:id="@+id/oppTable"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/mainTable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/BlackColor" />
+
+    <TextView
+        android:id="@+id/mainLife"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#00ffffff"
+        android:text="20"
+        android:textColor="@android:color/background_light"
+        android:textSize="150sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mainTable"
+        app:layout_constraintEnd_toEndOf="@+id/mainTable"
+        app:layout_constraintStart_toStartOf="@+id/mainTable"
+        app:layout_constraintTop_toTopOf="@+id/mainTable" />
+
+    <TextView
+        android:id="@+id/oppLife"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:rotation="180"
+        android:text="20"
+        android:textColor="@android:color/background_light"
+        android:textSize="150sp"
+        app:layout_constraintBottom_toTopOf="@+id/mainTable"
+        app:layout_constraintEnd_toEndOf="@+id/oppTable"
+        app:layout_constraintStart_toStartOf="@+id/oppTable"
+        app:layout_constraintTop_toTopOf="@+id/oppTable" />
+
+    <ImageView
+        android:id="@+id/mainAddLarge"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="mainAddClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mainLife"
+        app:layout_constraintTop_toBottomOf="@+id/oppTable"
+        app:srcCompat="@color/GreenColor" />
+
+    <ImageButton
+        android:id="@+id/mainAdd"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/oval_shape"
+        android:elevation="0dp"
+        android:onClick="mainAddClick"
+        app:layout_constraintBottom_toBottomOf="@+id/mainTable"
+        app:layout_constraintStart_toEndOf="@+id/mainLife"
+        app:layout_constraintTop_toTopOf="@+id/mainTable" />
+
+    <ImageView
+        android:id="@+id/oppAddLarge"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="0dp"
+        android:onClick="oppAddClick"
+        app:layout_constraintBottom_toTopOf="@+id/mainTable"
+        app:layout_constraintTop_toTopOf="@+id/oppTable"
+        app:layout_constraintEnd_toStartOf="@+id/oppLife"
+        app:srcCompat="@color/BlackColor"/>
+
+    <ImageButton
+        android:id="@+id/oppAdd"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/oval_shape"
+        android:onClick="oppAddClick"
+        app:layout_constraintBottom_toTopOf="@+id/mainTable"
+        app:layout_constraintEnd_toStartOf="@+id/oppLife"
+        app:layout_constraintTop_toTopOf="@+id/oppTable" />
+
+    <TextView
+        android:id="@+id/mainAddText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:text="+1"
+        android:textColor="@android:color/black"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mainAdd"
+        app:layout_constraintEnd_toEndOf="@+id/mainAdd"
+        app:layout_constraintStart_toStartOf="@+id/mainAdd"
+        app:layout_constraintTop_toTopOf="@+id/mainAdd" />
+
+    <TextView
+        android:id="@+id/oppAddText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="5dp"
+        android:rotation="180"
+        android:text="+1"
+        android:textColor="@android:color/black"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/oppAdd"
+        app:layout_constraintEnd_toEndOf="@+id/oppAdd"
+        app:layout_constraintStart_toStartOf="@+id/oppAdd"
+        app:layout_constraintTop_toTopOf="@+id/oppAdd" />
+
+    <ImageView
+        android:id="@+id/mainSubtractLarge"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="0dp"
+        android:onClick="mainSubtractClick"
+        app:layout_constraintBottom_toBottomOf="@+id/mainTable"
+        app:layout_constraintTop_toTopOf="@+id/mainTable"
+        app:layout_constraintEnd_toStartOf="@+id/mainLife"
+        app:srcCompat="@color/GreenColor"/>
+
+    <ImageButton
+        android:id="@+id/mainSubtract"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/oval_shape"
+        android:onClick="mainSubtractClick"
+        app:layout_constraintBottom_toBottomOf="@+id/mainTable"
+        app:layout_constraintEnd_toStartOf="@+id/mainLife"
+        app:layout_constraintTop_toTopOf="@+id/mainTable" />
+
+    <ImageView
+        android:id="@+id/oppSubtractLarge"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="0dp"
+        android:onClick="oppSubtractClick"
+        app:layout_constraintBottom_toTopOf="@+id/mainTable"
+        app:layout_constraintTop_toTopOf="@+id/oppTable"
+        app:layout_constraintStart_toEndOf="@+id/oppLife"
+        app:srcCompat="@color/BlackColor"/>
+
+    <ImageButton
+        android:id="@+id/oppSubtract"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/oval_shape"
+        android:onClick="oppSubtractClick"
+        app:layout_constraintBottom_toTopOf="@+id/mainTable"
+        app:layout_constraintStart_toEndOf="@+id/oppLife"
+        app:layout_constraintTop_toTopOf="@+id/oppTable" />
+
+    <TextView
+        android:id="@+id/mainSubtractText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="-1"
+        android:textColor="@android:color/black"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mainSubtract"
+        app:layout_constraintEnd_toEndOf="@+id/mainSubtract"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/mainSubtract"
+        app:layout_constraintTop_toTopOf="@+id/mainSubtract"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/oppSubtractText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:text="-1"
+        android:textColor="@android:color/black"
+        android:textSize="36sp"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="@+id/oppSubtract"
+        app:layout_constraintEnd_toEndOf="@+id/oppSubtract"
+        app:layout_constraintStart_toStartOf="@+id/oppSubtract"
+        app:layout_constraintTop_toTopOf="@+id/oppSubtract" />
+
+    <ImageButton
+        android:id="@+id/menu"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/other_buttons"
+        android:onClick="menuClick"
+        app:layout_constraintBottom_toBottomOf="@+id/mainTable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/oppTable" />
+
+    <ImageButton
+        android:id="@+id/twenty"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/other_buttons"
+        android:onClick="resetTwenty"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/mainTable"
+        app:layout_constraintStart_toEndOf="@+id/menu"
+        app:layout_constraintTop_toTopOf="@+id/oppTable"
+        app:layout_constraintVertical_bias="0.497" />
+
+    <TextView
+        android:id="@+id/twentyText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="4dp"
+        android:text="20"
+        android:textColor="@color/Gold"
+        android:textSize="28sp"
+        android:rotation="0"
+        app:layout_constraintBottom_toBottomOf="@+id/twenty"
+        app:layout_constraintEnd_toEndOf="@+id/twenty"
+        app:layout_constraintStart_toStartOf="@+id/twenty"
+        app:layout_constraintTop_toTopOf="@+id/twenty" />
+
+    <ImageButton
+        android:id="@+id/thirty"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/other_buttons"
+        android:onClick="resetThirty"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/mainTable"
+        app:layout_constraintStart_toEndOf="@+id/twenty"
+        app:layout_constraintTop_toTopOf="@+id/oppTable" />
+
+    <TextView
+        android:id="@+id/thirtyText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="4dp"
+        android:text="30"
+        android:textColor="@color/Gold"
+        android:textSize="28sp"
+        android:rotation="0"
+        app:layout_constraintBottom_toBottomOf="@+id/thirty"
+        app:layout_constraintEnd_toEndOf="@+id/thirty"
+        app:layout_constraintStart_toStartOf="@+id/thirty"
+        app:layout_constraintTop_toTopOf="@+id/thirty" />
+
+    <ImageButton
+        android:id="@+id/forty"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/other_buttons"
+        android:onClick="resetForty"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/mainTable"
+        app:layout_constraintStart_toEndOf="@+id/thirty"
+        app:layout_constraintTop_toTopOf="@+id/oppTable" />
+
+    <TextView
+        android:id="@+id/fortyText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="4dp"
+        android:text="40"
+        android:textColor="@color/Gold"
+        android:textSize="28sp"
+        android:rotation="0"
+        app:layout_constraintBottom_toBottomOf="@+id/forty"
+        app:layout_constraintEnd_toEndOf="@+id/forty"
+        app:layout_constraintStart_toStartOf="@+id/forty"
+        app:layout_constraintTop_toTopOf="@+id/forty" />
+
+    <ImageButton
+        android:id="@+id/mainColor"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/main_color_button"
+        app:layout_constraintEnd_toEndOf="@+id/mainTable"
+        app:layout_constraintBottom_toBottomOf="@+id/mainTable"
+        android:onClick="changeMainColor"/>
+
+    <ImageButton
+        android:id="@+id/oppColor"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/opp_color_button"
+        app:layout_constraintStart_toStartOf="@+id/oppTable"
+        app:layout_constraintTop_toTopOf="@+id/oppTable"
+        android:onClick="changeOppColor"/>
+
+    <ImageButton
+        android:id="@+id/modeFour"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="gone"
+        android:background="@drawable/other_buttons"
+        app:layout_constraintTop_toTopOf="@+id/oppTable"
+        app:layout_constraintBottom_toBottomOf="@+id/mainTable"
+        app:layout_constraintEnd_toStartOf="@+id/menu"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="228dp"
+        android:onClick="changeModeToFour"/>
+
+    <TextView
+        android:id="@+id/modeFourText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="0dp"
+        android:text="4P"
+        app:layout_constraintTop_toTopOf="@+id/modeFour"
+        app:layout_constraintBottom_toBottomOf="@+id/modeFour"
+        app:layout_constraintStart_toStartOf="@+id/modeFour"
+        app:layout_constraintEnd_toEndOf="@+id/modeFour"
+        android:textColor="@color/Gold"
+        android:textSize="27sp"/>
+
+    <ImageButton
+        android:id="@+id/modeTwo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="gone"
+        android:background="@drawable/other_buttons"
+        app:layout_constraintTop_toTopOf="@+id/oppTable"
+        app:layout_constraintBottom_toBottomOf="@+id/mainTable"
+        app:layout_constraintEnd_toStartOf="@+id/modeFour"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="228dp" />
+
+    <TextView
+        android:id="@+id/modeTwoText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="0dp"
+        android:text="2P"
+        app:layout_constraintTop_toTopOf="@+id/modeTwo"
+        app:layout_constraintBottom_toBottomOf="@+id/modeTwo"
+        app:layout_constraintStart_toStartOf="@+id/modeTwo"
+        app:layout_constraintEnd_toEndOf="@+id/modeTwo"
+        android:textColor="@color/Gold"
+        android:textSize="27sp"/>
+
+</android.support.constraint.ConstraintLayout>
